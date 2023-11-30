@@ -11,7 +11,6 @@ async function getData() {
       createdAt: "desc",
     },
   });
-
   return data;
 }
 export default async function Home() {
@@ -46,7 +45,6 @@ export default async function Home() {
   }
   async function deleteItem(formData: FormData) {
     "use server";
-
     const inputId = formData.get("inputId") as string;
 
     await prisma.todo.delete({
